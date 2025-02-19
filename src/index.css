@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+    overflow-x: hidden;
+  }
+  
+*{
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.shiny-border {
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    /* Changed to make the gradient only affect the border */
+    border-image: linear-gradient(#050505, #050505), 
+                      linear-gradient(
+                          90deg, 
+                          #00a1ff,    /* Solid color for sharper border */
+                          #b967ff,   
+                          #00a1ff,    
+                          #b967ff    
+                      );
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    background-size: 100% 100%, 300% 100%;
+    animation: border-flow 8s linear infinite;
+    transition: all 0.3s ease;
+}
+
+.shiny-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+    border-radius: inherit;
+    /* Changed to make glow only around the border */
+    background: linear-gradient(
+        45deg,
+        transparent 20%,
+        #2e7ca926,    
+        rgba(145, 110, 176, 0.15),   
+        rgba(71, 130, 164, 0.15),     
+        rgba(185, 103, 255, 0.15),
+        transparent 80%    
+    );
+    filter: blur(20px);
+    background-size: 200% 200%;
+    animation: glow-pulse 4s ease infinite;
+    pointer-events: none; 
+}
+
+.shiny-border:hover {
+    transform: translateY(-2px);
+}
+
+.shiny-border:hover::before {
+    filter: blur(25px);
+}
+
+@keyframes border-flow {
+    0% {
+        background-position: 0% 0%, 0% 50%;
+        filter: drop-shadow(0 0 10px rgba(0, 161, 255, 0.3));
+    }
+    25% {
+        filter: drop-shadow(0 0 15px rgba(185, 103, 255, 0.4));
+    }
+    50% {
+        background-position: 0% 0%, 150% 50%;
+        filter: drop-shadow(0 0 20px rgba(0, 161, 255, 0.5));
+    }
+    75% {
+        filter: drop-shadow(0 0 15px rgba(185, 103, 255, 0.4));
+    }
+    100% {
+        background-position: 0% 0%, 300% 50%;
+        filter: drop-shadow(0 0 10px rgba(0, 161, 255, 0.3));
+    }
+}
+.nice-border {
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    background-size: 100% 100%, 300% 100%;
+    animation: border-glow 3s linear infinite;
+}
+
+@keyframes border-glow {
+    0% {
+        filter: drop-shadow(0 0 6px rgba(0, 161, 255, 0.2));
+        background-position: 0% 0%, 0% 50%;
+    }
+    50% {
+        filter: drop-shadow(0 0 12px #00a1ff);
+        background-position: 0% 0%, 150% 50%;
+    }
+    100% {
+        filter: drop-shadow(0 0 6px rgba(0, 161, 255, 0.5));
+        background-position: 0% 0%, 300% 50%;
+    }
+}
+/* Flip Card container */
+.flip-card {
+    perspective: 1200px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Flip card inner to hold front and back */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Flip effect on hover */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front side of the card */
+  .flip-card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: visible;
+  }
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Back side of the card (hidden by default) */
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
