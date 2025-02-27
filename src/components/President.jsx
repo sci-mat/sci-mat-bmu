@@ -1,41 +1,82 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-const President = ({ img, linkedin, github ,instagram }) => {
-  const defaultImg ="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/330px-Donald_Trump_official_portrait.jpg";
+import React from "react";
+
+const President = ({ img, linkedin, github, instagram }) => {
+  const defaultImg =
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/330px-Donald_Trump_official_portrait.jpg";
   const defaultGithub = "https://github.com/";
   const defaulLinkedin = "https://www.linkedin.com/";
-  const DefaulInstagram = "https://www.instagram.com/"
+  const DefaulInstagram = "https://www.instagram.com/";
+
   return (
-    <div className="flex justify-center items-center px-4 py-8 md:px-10 md:py-12">
-      <div className="flex justify-center items-center gap-5 md:gap-8 w-full md:w-auto bg-white/5 p-4 backdrop-blur-md border border-white/30 rounded-lg shadow-lg ">
-        <div className="flex flex-col text-white text-center md:text-left items-center md:items-start">
-          <h1 className="font-body text-blue text-xl md:text-3xl font-bold whitespace-nowrap">
-            Aditya Bansal
-          </h1>
-          <h2 className="font-body text-purple text-lg md:text-xl mt-2">
-            President
-          </h2>
-          <div className="flex justify-center md:justify-start items-center gap-5 pt-4">
-            <a href={github || defaultGithub} target="_blank" rel="noopener noreferrer">
-              <FaGithub size={25} className="cursor-pointer hover:text-purple hover:scale-110" />
-            </a>
-            <a href={linkedin || defaulLinkedin} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={25} className="cursor-pointer hover:text-blue hover:scale-110" />
-            </a>
-            <a href={instagram || DefaulInstagram} target="_blank" rel="noopener noreferrer">
-              <FaInstagram size={25} className="cursor-pointer hover:text-red-400 hover:scale-110" />
-            </a>
+    <div className="flex justify-center py-4">
+      <div className="relative group w-full max-w-lg px-2 md:px-0">
+        <div className="absolute inset-0 bg-[#00b4ff] rounded-lg opacity-0 group-hover:opacity-20 blur-xl transition-all duration-700"></div>
+        <div className="relative">
+          <div className="hex-container relative mx-auto">
+            <div className="hex-outer bg-gradient-to-br from-[#00b4ff] to-[#8a2be2]">
+              <div className="hex-inner bg-neutral-800 ">
+                <div className="p-4 md:p-6 text-center">
+                  <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto mb-4">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00b4ff] to-[#8a2be2] animate-pulse"></div>
+                    <div className="absolute inset-0.5 rounded-full bg-neutral-800"></div>
+                    <div className="absolute inset-2 overflow-hidden rounded-full bg-neutral-700 flex items-center justify-center">
+                      <img
+                        src={img || defaultImg}
+                        alt="Profile"
+                        className="object-cover w-full rounded-full"
+                        onError={(e) => (e.target.src = defaultImg)}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mt-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
+                      Aditya Bansal
+                    </h3>
+                    <p className="text-[#00b4ff] font-medium mb-2 md:mb-3">
+                      President
+                    </p>
+                    <p className="text-gray-300 text-sm md:text-base mb-4">
+                      Physics major with a passion for quantum mechanics and
+                      scientific outreach. Leading Sci-Mat with vision and
+                      innovation.
+                    </p>
+                    <div className="flex justify-center gap-2 md:gap-4 mt-4 md:mt-6">
+                      <a
+                        href={github || defaultGithub}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-[#00b4ff] transition-colors"
+                      >
+                        <FaGithub size={20} className="md:size-25" />
+                      </a>
+                      <a
+                        href={linkedin || defaulLinkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-[#00b4ff] transition-colors"
+                      >
+                        <FaLinkedin size={20} className="md:size-25" />
+                      </a>
+                      <a
+                        href={instagram || DefaulInstagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-[#00b4ff] transition-colors"
+                      >
+                        <FaInstagram size={20} className="md:size-25" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="w-full h-full">
-          <img
-            src={img || defaultImg}
-            alt="Profile"
-            className="object-cover w-40 h-36 md:w-48 md:h-48 lg:w-64 lg:h-64"
-            onError={(e) => (e.target.src = defaultImg)}
-          />
         </div>
       </div>
     </div>
   );
 };
+
 export default President;

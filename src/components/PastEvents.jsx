@@ -28,7 +28,7 @@ The event was a true fusion of art and science, as students meticulously calcula
 From fractal patterns forming intricate Ganesha figurines to geometric designs depicting the divine elephant-headed deity, the creations left everyone in awe of the students' ingenuity and mathematical prowess.
 
   </p>,
-    image: "/assets/craft.png"
+    image: "https://res.cloudinary.com/dufhheixk/image/upload/q_auto/f_auto/ganesh_ezfipb?_a=BAMCkGP80"
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ From fractal patterns forming intricate Ganesha figurines to geometric designs d
 We took the kids on an exciting journey, sharing amazing facts about the universe — from the planets in our solar system to faraway stars and galaxies. Using fun presentations and videos, the children learned about black holes, the Moon, and the chance of life on other planets. They were very excited during the Q&A session, asking interesting questions about space missions and what it’s like to be an astronaut.
 
  </p>,
-    image: "/assets/journey.png"
+    image: "https://res.cloudinary.com/dufhheixk/image/upload/q_auto/f_auto/space_clx2ob?_a=BAMCkGP80"
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ After the presentation, Mr. Singh opened the floor for a lively Q&A session, add
 
 The host engaged the audience with interactive questions, rewarding correct answers with chocolates, adding fun and inclusivity. In the first round, four teams competed on stage, answering 10 questions, with the highest-scoring team advancing to the next round. The event was a resounding success, blending knowledge and entertainment, and leaving participants and spectators with a memorable experience.
 </p>,
-    image: "/assets/hacked.png"
+    image: "https://res.cloudinary.com/dufhheixk/image/upload/q_auto/f_auto/kbc_jdwmcs?_a=BAMCkGP80"
   },
   {
     id: 10,
@@ -132,7 +132,6 @@ const PastEvents = () => {
         </h1>
         <section id="events">
         <div className="w-full h-full">
-          <CardStack cards={pastEvents} />
         </div>
          </section>
       </div>
