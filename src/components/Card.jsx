@@ -1,8 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Card = ({ name, team, img, linkedin, github, instagram }) => {
-  const defaultImg =
-    "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250";
   const defaultGithub = "https://github.com/";
   const defaulLinkedin = "https://www.linkedin.com/";
   const DefaulInstagram = "https://www.instagram.com/";
@@ -16,7 +14,7 @@ const Card = ({ name, team, img, linkedin, github, instagram }) => {
           <div className="absolute inset-1 rounded-full bg-neutral-800"></div>
           <div className="absolute inset-2 overflow-hidden rounded-full bg-neutral-700 flex items-center justify-center">
             <img
-              src={img || defaultImg}
+              src={img}
               alt="Profile"
               className="w-full h-full object-cover rounded-full"
               onError={(e) => (e.target.src = defaultImg)}

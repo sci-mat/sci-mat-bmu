@@ -1,6 +1,21 @@
 import Card from "./Card";
 import President from "./President";
 import VicePresident from "./VicePresident";
+
+import Mk from "../assets/Mukund.webp";
+import Ss from "../assets/Sourav.webp";
+import Ag from "../assets/Ayush.webp";
+import K from "../assets/Kanika.webp";
+import Km from "../assets/Krishna.webp";
+import Mj from "../assets/Mitali.webp";
+import P from "../assets/Pratima.webp";
+import Sibi from "../assets/Sibi.webp";
+import Kg from "../assets/Khushi.webp";
+import As from "../assets/Aditya.webp";
+import Vj from "../assets/Vidipt.webp";
+import L from "../assets/Lakshay.webp";
+import Prateek from "../assets/Prateek.webp";
+import Sai from "../assets/Sai.webp";
 const OurTeam = () => {
   return (
     <section
@@ -19,12 +34,11 @@ const OurTeam = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 relative">
             <span className="text-white">
-              Meet the {" "}
+              Meet the{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8a2be2] to-[#00ffcc]">
                 Sci-Mat Team
               </span>
             </span>
-           
           </h2>
           <p class="text-gray-300 max-w-3xl mx-auto text-lg mt-12">
             Our team of passionate student leaders is dedicated to fostering
@@ -34,13 +48,11 @@ const OurTeam = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <President
-          img={"/assets/AdityaBansal.png"}
           linkedin={"https://www.linkedin.com/in/aditya-bansal-developer"}
           instagram={"https://www.instagram.com/iamadityabansal"}
           github={"https://github.com/SimplyAditya"}
         />
         <VicePresident
-          img={"/assets/Priyal.png"}
           linkedin={"https://www.linkedin.com/in/priyal-khullar"}
           instagram={"https://www.instagram.com/priyalkhullar"}
           github={"https://github.com/priyalkhullar"}
@@ -50,7 +62,7 @@ const OurTeam = () => {
         <Card
           name={"Mukund Madhav Agarwal"}
           team={"Treasurer"}
-          img={"/assets/Mukund.png"}
+          img={Mk}
           linkedin={
             "https://www.linkedin.com/in/mukund-madhav-agarwal-777057288"
           }
@@ -59,7 +71,7 @@ const OurTeam = () => {
         <Card
           name={"Sourav Singh"}
           team={"Operations"}
-          img={"/assets/Sourav.png"}
+          img={Ss}
           linkedin={
             "https://www.linkedin.com/in/sourav-singh-8b2b79274?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bv9TFO3brSt%2BX0af%2FLbfj4Q%3D%3D"
           }
@@ -69,45 +81,41 @@ const OurTeam = () => {
         <Card
           name={"Ayush Gupta"}
           team={"Operations"}
-          img={"/assets/Ayush.png"}
+          img={Ag}
           linkedin={"https://www.linkedin.com/in/ayush-gupta-07612928b/"}
           instagram={"https://www.instagram.com/_ayush1075"}
           github={"https://github.com/Ayush1075"}
         />
+        <Card name={"Kanika"} team={"Marketing and Social Media"} img={K} />
         <Card
-          name={"Kanika"}
+          name={"Krishna Mundra"}
           team={"Marketing and Social Media"}
-          img={"/assets/Kanika.png"}
-        />
-        <Card
-          name={"Krishna Mundra "}
-          team={"Marketing and Social Media"}
-          img={"/assets/Krishna.png"}
+          img={Km}
           instagram={"https://www.instagram.com/mundra_krishna11"}
         />
         <Card
           name={"Mitali Joshi"}
           team={"Marketing and Social Media"}
-          img={"/assets/Mitali.png"}
+          img={Mj}
           instagram={"https://www.instagram.com/_mitali_joshi18"}
           github={"https://github.com/joshi-mitali"}
         />
         <Card
           name={"Pratima"}
           team={"Marketing and Social Media"}
-          img={"/assets/Pratima.png"}
+          img={P}
           instagram={"https://www.instagram.com/pratima.rao5_"}
         />
         <Card
           name={"Sibi Surya"}
           team={"Content "}
-          img={"/assets/Sibi.png"}
+          img={Sibi}
           linkedin={"https://www.linkedin.com/in/ssibisurya"}
         />
         <Card
           name={"Khushi goyal"}
           team={"Content"}
-          img={"/assets/Khushi.png"}
+          img={Kg}
           linkedin={"https://www.linkedin.com/in/khushi-goyal-4aab25280/"}
           instagram={"https://www.instagram.com/jk.khushi"}
           github={"https://github.com/khushi-goyal23"}
@@ -115,7 +123,7 @@ const OurTeam = () => {
         <Card
           name={"Aaditya Sharma"}
           team={"Design"}
-          img={"/assets/Aditya.png"}
+          img={As}
           linkedin={
             "https://www.linkedin.com/in/aaditya-sharma-b373b02a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           }
@@ -124,7 +132,7 @@ const OurTeam = () => {
         <Card
           name={"Vidipt Jain"}
           team={"Design"}
-          img={"/assets/Vidipt.png"}
+          img={Vj}
           linkedin={
             "https://www.linkedin.com/in/vidipt-jain-3186b4277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           }
@@ -133,7 +141,7 @@ const OurTeam = () => {
         <Card
           name={"Lakshay"}
           team={"Web Development"}
-          img={"/assets/Lakshay.png"}
+          img={L}
           linkedin={"https://www.linkedin.com/in/lakshaynandwani"}
           instagram={"https://www.instagram.com/lakshay_24_11"}
           github={"https://github.com/lakshay-2411"}
@@ -141,7 +149,7 @@ const OurTeam = () => {
         <Card
           name={"Prateek Yadav"}
           team={"Web Development"}
-          img={"/assets/Prateek.png"}
+          img={Prateek}
           linkedin={
             "https://www.linkedin.com/in/prateek-yadav-aa5b77283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           }
@@ -151,7 +159,7 @@ const OurTeam = () => {
         <Card
           name={"Sai Sharath Chandra Koppu"}
           team={"Web Development"}
-          img={"/assets/Sai.png"}
+          img={Sai}
           linkedin={
             "http://linkedin.com/in/sai-sharath-chandra-koppu-065214311"
           }

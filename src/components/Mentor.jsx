@@ -1,5 +1,5 @@
 import Special from "./Special";
-import hu from "../assets/Himanshu.jpg"
+import hu from "../assets/Himanshu.webp"
 import rb from "../assets/Ranjib.webp"
 const Mentor = () => {
   return (

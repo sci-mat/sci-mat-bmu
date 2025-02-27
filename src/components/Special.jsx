@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 
@@ -19,6 +18,7 @@ const Special = ({ name, email, imgUrl, linkedin, about }) => {
             <img
               src={imgUrl}
               alt={`${name}'s profile`}
+              loading="lazy"
               className="w-full h-full object-cover rounded-full"
             />
           </div>

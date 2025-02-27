@@ -1,7 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-const VicePresident = ({ img, linkedin, github, instagram }) => {
-  const defaultImg =
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/330px-Donald_Trump_official_portrait.jpg";
+import Pk from "../assets/Priyal.webp"
+const VicePresident = ({ linkedin, github, instagram }) => {
   const defaultGithub = "https://github.com/";
   const defaulLinkedin = "https://www.linkedin.com/";
   const DefaulInstagram = "https://www.instagram.com/";
@@ -20,7 +19,7 @@ const VicePresident = ({ img, linkedin, github, instagram }) => {
                     <div className="absolute inset-0.5 rounded-full bg-neutral-800"></div>
                     <div className="absolute inset-2 overflow-hidden rounded-full bg-neutral-700 flex items-center justify-center">
                       <img
-                        src={img || defaultImg}
+                        src={Pk}
                         alt="Profile"
                         className="object-cover w-full rounded-full"
                         onError={(e) => (e.target.src = defaultImg)}

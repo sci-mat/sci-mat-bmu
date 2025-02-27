@@ -13,7 +13,6 @@ const Contactus = () => {
       id="contact"
       className="py-24 bg-neutral-900 relative overflow-hidden"
     >
-      {/* Enhanced background patterns */}
       <div
         className="absolute inset-0 bg-[radial-gradient(#00ffcc_1px,transparent_1px)]"
         style={{ backgroundSize: "25px 25px", opacity: 0.05 }}
